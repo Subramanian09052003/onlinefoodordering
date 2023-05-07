@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Foodordering</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<style>
+     *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: url('/images/food3.jpg');
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+.login-box {
+	width: 320px;
+	height: 420px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 10px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.login-box p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.login-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.login-box input[type="text"], input[type="password"] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #ff9900;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
+.login-box input[type="submit"]:hover {
+	cursor: pointer;
+	background: #ff6600;
+	color: #000;
+}
+
+.login-box a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+}
+
+.login-box a:hover {
+	color: #ff6600;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 95%;
+  z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff4d4d;
+  }
+  
+  .logo a span {
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+  } 
+  .login a:hover {
+    background-color:orange;
+  }
+
+  .auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-links a {
+    background-color: #ff4d4d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    margin-left: 10px;
+  }
+  
+  .auth-links a:hover {
+    background-color: #ff3333;
+  }
+  .nav-links a:hover {
+    color: #ff4d4d;
+  }
+  
+
+</style>
+<body onload="displayLogInButtons()">
+	<nav>
+		<div class="logo">
+		  <a href="#">FoodOrdering</a>
+		</div>
+		<ul class="nav-links">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="about.html">About Us</a></li>
+		</ul>
+		<div class="auth-links">
+			<a href="login.html" class="unauthenticated">Login</a>
+			<a href="signin.html" class="unauthenticated">Sign Up</a>
+			<a onclick="logout()" class="authenticated">Logout</a>
+		</div>
+	  </nav>
+	  <div class="login-box">
+		<div id="failure-message" style="display: none; justify-content: center; color: red">
+			<p>Login failed</p>
+		</div>
+		<h1>Login Here</h1>
+		<form onsubmit="login(event)">
+			<p>Username</p>
+			<input type="text" name="username" id="username" placeholder="Enter Username" required>
+			<p>Password</p>
+			<input type="password" name="password" id="password" placeholder="Enter Password" required>
+			<input type="submit" name="submit" value="Login">
+			<a href="#">Forgot Password</a><br>
+			<a href="#">Don't have an account? Sign Up</a>
+		</form>
+	</div>
+</body>
+<script src="/js/login.js">
+  
+</script>
+</html>

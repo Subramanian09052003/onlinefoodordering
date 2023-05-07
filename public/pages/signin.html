@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foodordering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+    body{
+         
+         
+        margin: 0;
+	padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('/images/food7.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+
+.signup-box {
+	width: 320px;
+	height: 480px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+    border-radius: 10px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.signup-box p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.signup-box input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.signup-box input[type="text"], input[type="password"] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.signup-box input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #ff9900;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.signup-box input[type="submit"]:hover {
+	cursor: pointer;
+	background: #ff6600;
+	color: #000;
+}
+
+.signup-box a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+}
+
+.signup-box a:hover {
+	color: #ff6600;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 95%;
+  z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff4d4d;
+  }
+  
+  .logo a span {
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+  } 
+  .login a:hover {
+    background-color:orange;
+  }
+
+  .auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-links a {
+    background-color: #ff4d4d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    margin-left: 10px;
+  }
+  
+  .auth-links a:hover {
+    background-color: #ff3333;
+  }
+  .nav-links a:hover {
+    color: #ff4d4d;
+  }
+  
+
+
+</style>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="">FoodOrdering</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <div class="auth-links">
+      <a href="login.html">Login</a>
+      <a href="signin.html">Sign Up</a>
+    </div>
+  </nav>
+  <div class="signup-box">
+    <h1>Sign Up Here</h1>
+    <form>
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <p>Password</p>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <p>Confirm Password</p>
+        <input type="password" name="confirmpassword" placeholder="Confirm Password" required>
+        <input type="submit" name="submit" value="Sign Up">
+        <a href="#">Already have an account? Login</a>
+    </form>
+</div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDelivery</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/Meals.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Exo+2:wght@300&family=Inspiration&family=Poppins:ital,wght@0,400;0,500;0,700;1,100&family=Roboto:wght@100&family=Tilt+Neon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+  
+#image{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('/images/food6.jpg') no-repeat 50% 50%;
+    background-size: cover;
+  
+  }
+  #imageontext{
+    background-color: #7a7a7a69;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 217, 0);
+  text-align: center;
+
+    padding: 10px;
+    width: 100vw;
+    
+  }
+  #imageontext h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+   cursor: pointer;
+  }
+:root {
+    --color-1: #001542;
+    --color-2: #085454;
+    --color-3: #7A7A7A;
+    --color-4: #FFFFFF;
+    --color-5: #FFB30D;
+    --color-6: #7a7a7a69;
+}
+
+.menu-item {
+    background-color: #085454;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu-item ul {
+    list-style: none;
+}
+
+.menu-item ul li {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+}
+
+.menu-item a {
+    color: var(--color-4);
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    color: var(--color-5)
+}
+footer {
+   
+   margin-top: 90px;
+  
+}
+.nav-cart img{
+    width: 33px;
+    height: 33px;
+  }
+  .nav-cart{
+    cursor: pointer;
+
+  } 
+  .card-items{
+    
+    cursor: pointer;
+   
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff4d4d;
+  }
+  
+  .logo a span {
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+  } 
+  .login a:hover {
+    background-color:orange;
+  }
+
+  .auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-links a {
+    background-color: #ff4d4d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    margin-left: 10px;
+  }
+  
+  .auth-links a:hover {
+    background-color: #ff3333;
+  }
+  .nav-links a:hover {
+    color: #ff4d4d;
+  }
+  footer {
+   
+   background-color: #333;
+   color: #fff;
+   padding: 10px 5px;
+   text-align: center;
+  bottom: 0;
+}
+.fa{
+   padding-left: 30px;
+   font-size: 30px;
+   text-align: center;
+   text-decoration: none;
+   
+
+}
+.hiddenplace{
+ margin-bottom: 65px;
+}
+</style>
+<body onload="displayLogInButtons()">
+    
+
+<nav>
+        <div class="logo">
+          <a href="#">FoodOrdering</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html" style="color:orange;"> Menu<hr style="color:red;"></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-cart">
+          
+          <img src="/images/shoppingcard.png" alt=""><a class="cart-items">0</a></img>
+         
+      </div>
+        <div class="auth-links">
+          <a href="login.html" class="unauthenticated">Login</a>
+          <a href="signin.html" class="unauthenticated">Sign Up</a>
+          <a onclick="logout()" class="authenticated">Logout</a>
+        </div>
+      </nav>
+      <p class="hiddenplace">jk</p>
+      <div id="image">
+        <div id="imageontext">
+          <h3>AAA restaurants</h3>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <ul>
+            <li><a href="#" class="menu" data-title="Latest Products" data-id="latest">Latest</a></li>
+            <li><a href="#" class="menu" data-title="Favourite" data-id="fav">Favourite</a></li>
+            <li><a href="#" class="menu" data-title="Vegetarian" data-id="Veg">Veg</a></li>
+            <li><a href="#" class="menu" data-title="Non Vegetarian" data-id="Non-Veg">Non Veg</a></li>
+            <li><a href="#" class="menu" data-title="Juice" data-id="Juice">Juice</a></li>
+            <li><a href="#" class="menu" data-title="Cakes" data-id="Cake">Cakes</a></li>
+            <li><a href="#" class="menu" data-title="Sweets" data-id="Sweet">Sweets</a></li>
+            <li><a href="#" class="menu" data-title="Ice Cream" data-id="IceCream">Ice Cream</a></li>
+            <li><a href="#" class="menu" data-title="Pizza" data-id="Pizza">Pizza</a></li>
+            <li><a href="#" class="menu" data-title="Soups" data-id="Soup">Soup</a></li>
+        </ul>
+    </div>
+
+
+   
+<div class="products">
+  <div class="products-container">
+
+  </div>
+
+  <div class="cart-overlay cart-overlay-close">
+      <div class="cart">
+          <span class="btn-close-cart"><i class="fa fa-window-close"></i></span>
+          <h2>Your Cart Products</h2>
+          <div class="cart-content">
+              
+        </div>
+
+          <div class="cart-footer">
+              <h3>Total Amount Rs: <span class="cart-total">0</span></h3>
+              <button class="btn btn-clear-cart">clear cart</button>
+          </div>
+
+
+
+      </div>
+  </div>
+
+
+
+
+     
+
+      <footer>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-skype"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <p>© FoodDelivery 2023</p>
+        <p>Phone no:+91 96400 75622</p>
+        <p>Developed by our team</p>
+        
+             </footer>
+        </body>
+        <style>
+         
+
+        </style>
+        <script src="/js/menu.js"></script>
+        <script src="/js/login.js"></script>
+        </html>
